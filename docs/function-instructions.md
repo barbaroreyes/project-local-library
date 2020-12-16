@@ -8,8 +8,7 @@ The following functions can be completed in whichever order you choose. There ar
 
 ![Accounts page for Local Library](./images/accounts.png)
 
-#### findAccountById()
-
+#### findAccountById()###done
 The `findAccountById()` function in `public/src/accounts.js` has two parameters, in the following order:
 
 - An array of accounts.
@@ -33,7 +32,7 @@ findAccountById(accounts, "5f446f2ecfaf0310387c9603");
 */
 ```
 
-#### sortAccountsByLastName()
+#### sortAccountsByLastName()##done
 
 The `sortAccountsByLastName()` function in `public/src/accounts.js` has a single parameter:
 
@@ -126,7 +125,7 @@ booksInPossession(account, books, authors);
 
 ![Books page for Local Library](./images/books.png)
 
-#### findAuthorById()
+#### findAuthorById()##done
 
 The `findAuthorById()` function in `public/src/books.js` has two parameters, in the following order:
 
@@ -150,7 +149,7 @@ findAuthorById(authors, 11);
 */
 ```
 
-#### findBookById()
+#### findBookById() ##done
 
 The `findBookById()` function in `public/src/books.js` has two parameters, in the following order:
 
@@ -275,7 +274,7 @@ getBorrowersForBook(book, accounts);
 
 ![Home page for Local Library](./images/home.png)
 
-### totalBooksCount()
+### totalBooksCount()##done
 
 The `totalBooksCount()` function in `public/src/home.js` has a single parameter:
 
@@ -289,7 +288,7 @@ It returns a number that represents the number of book objects inside of the arr
 totalBooksCount(books); // 100
 ```
 
-### totalAccountsCount()
+### totalAccountsCount()##done
 
 The `totalAccountsCount()` function in `public/src/home.js` has a single parameter:
 
@@ -303,7 +302,7 @@ It returns a number that represents the number of account objects inside of the 
 totalAccountsCount(accounts); // 75
 ```
 
-### booksBorrowedCount()
+### booksBorrowedCount()##done
 
 The `booksBorrowedCount()` function in `public/src/home.js` has a single parameter:
 
@@ -317,7 +316,7 @@ It returns a number that represents the number of books _that have been taken ou
 booksBorrowedCount(accounts); // 65
 ```
 
-### mostCommonGenres()
+### mostCommonGenres()#done
 
 The `mostCommonGenres()` function in `public/src/home.js` has a single parameter:
 

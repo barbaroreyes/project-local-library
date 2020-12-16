@@ -1,20 +1,38 @@
-function totalBooksCount(books) {}
+const totalBooksCount = books => books.length
 
-function totalAccountsCount(accounts) {}
+const totalAccountsCount =accounts => accounts.length
 
-function booksBorrowedCount(books) {}
+const booksBorrowedCount = books => {
+ const all = books.filter(a => a.borrows[0].returned=== false)
+ return all.length
+}
 
-function mostCommonGenres(books) {}
+function getMostCommonGenres(books) {
+  const arr = [];
+  const obj = {};
+  for (let i = 0; i < books.length; i++) {
+    obj[books[i].genre] = books[i].borrows.length;
+    const occur = books[i].borrows.length;
+    for (let gen in obj) {
+      arr.push({
+        name: gen,
+        count: occur,
+      });
+    }
+  }
+  arr.sort((a, b) => (a.count < b.count ? 1 : -1));
+  return arr.slice(0, 5);
+}
 
-function mostPopularBooks(books) {}
-
-function mostPopularAuthors(books, authors) {}
+const getMostPopularBooks = books => books.filter(a => a.borrows.length >=29)
+console.log(getMostPopularBooks(books))
+function getMostPopularAuthors(books, authors) {}
 
 module.exports = {
   totalBooksCount,
   totalAccountsCount,
   booksBorrowedCount,
-  mostCommonGenres,
-  mostPopularBooks,
-  mostPopularAuthors,
+  getMostCommonGenres,
+  getMostPopularBooks,
+  getMostPopularAuthors,
 };
