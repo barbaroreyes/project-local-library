@@ -1,5 +1,4 @@
 const findAuthorById =(authors, id) => authors.find(a => a.id ===id)
-  
 
 const  findBookById = (books, id) => books.find(a => a.id === id)
  
@@ -9,7 +8,6 @@ const partitionBooksByBorrowedStatus =(books)=> {
  const nYet = books.filter(a => a.borrows[0].returned ===false)
  return [nYet,done]
 }
-// console.log(partitionBooksByBorrowedStatus(books))
 
 function getBorrowersForBook(book, accounts) {
   let borrw = [];

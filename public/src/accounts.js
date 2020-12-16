@@ -10,8 +10,6 @@ const numberOfBorrows = (account, books) => {
   }, 0)
   return result
 }  
-
-
 const booksInPossession = (account, books, authors) =>  {
  let posees =[];
  for(let i =0 ; i < books.length; i++){
@@ -31,6 +29,12 @@ const booksInPossession = (account, books, authors) =>  {
  }
  return posees
 }
+
+  
+ 
+
+
+
 
 module.exports = {
   findAccountById,

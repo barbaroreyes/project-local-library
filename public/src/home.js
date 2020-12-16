@@ -1,4 +1,8 @@
-const totalBooksCount = books => books.length
+const totalBooksCount = books => {
+  const all = books.map(a => a.id)
+  return all.length
+}
+  
 
 const totalAccountsCount =accounts => accounts.length
 
