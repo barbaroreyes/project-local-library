@@ -24,8 +24,8 @@ function getMostCommonGenres(books) {
   return arr.slice(0, 5);
 }
 
-const getMostPopularBooks = books => books.filter(a => a.borrows.length >=29)
-console.log(getMostPopularBooks(books))
+const getMostPopularBooks = books => {}
+// console.log(getMostPopularBooks(books))
 function getMostPopularAuthors(books, authors) {}
 
 module.exports = {

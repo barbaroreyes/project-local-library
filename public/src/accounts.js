@@ -58,4 +58,3 @@ module.exports = {
   numberOfBorrows,
   booksInPossession,
 };
-// let borrowedBooks = books.filter(book => book.borrows.some(borrow => (borrow.id === id && borrow.returned === false))); This is short for first getting the borrowed books with ID

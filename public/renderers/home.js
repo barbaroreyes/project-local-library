@@ -23,7 +23,7 @@ function renderTotalAccounts() {
 }
 
 function renderMostCommonGenres() {
-  const result = mostCommonGenres(books);
+  const result = getMostCommonGenres(books);
   if (typeof result !== "object") return;
 
   const lis = result
@@ -37,7 +37,7 @@ function renderMostCommonGenres() {
 }
 
 function renderMostPopularBooks() {
-  const result = mostPopularBooks(books);
+  const result = getMostPopularBooks(books);
   if (typeof result !== "object") return;
 
   const lis = result
@@ -51,7 +51,7 @@ function renderMostPopularBooks() {
 }
 
 function renderMostPopularAuthors() {
-  const result = mostPopularAuthors(books, authors);
+  const result = getMostPopularAuthors(books, authors);
   if (typeof result !== "object") return;
 
   const lis = result
