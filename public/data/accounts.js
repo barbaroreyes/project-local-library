@@ -1,12 +1,12 @@
 const accounts = [
-  {
+ {
     id: "5f446f2ecfaf0310387c9603",
     picture: "https://api.adorable.io/avatars/75/esther.tucker@zillacon.me",
     age: 25,
     name: {
       first: "Esther",
       last: "Tucker",
-    },
+    } ,
     company: "ZILLACON",
     email: "esther.tucker@zillacon.me",
     registered: "Thursday, May 28, 2015 2:51 PM",

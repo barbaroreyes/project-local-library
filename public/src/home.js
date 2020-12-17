@@ -1,13 +1,11 @@
 const totalBooksCount = books => {
-  const all = books.map(a => a.id)
+  const all = books.map(book => book.id)
   return all.length
 }
-  
-
 const totalAccountsCount =accounts => accounts.length
 
 const booksBorrowedCount = books => {
- const all = books.filter(a => a.borrows[0].returned=== false)
+ const all = books.filter(book => book.borrows[0].returned=== false)
  return all.length
 }
 
@@ -24,7 +22,7 @@ function getMostCommonGenres(books) {
       });
     }
   }
-  arr.sort((a, b) => (a.count < b.count ? 1 : -1));
+  arr.sort((gen1, gen2) => (gen1.count < gen2.count ? 1 : -1));
   return arr.slice(0, 5);
 }
 function helper(books){
