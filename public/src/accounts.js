@@ -11,8 +11,6 @@ const numberOfBorrows = (account, books) => {
   return result
 }  
 
-
-console.log(booksInPossession())
 const booksInPossession = (account, books, authors) =>  {
  let posees =[];
  for(let i =0 ; i < books.length; i++){
