@@ -9,7 +9,7 @@ const booksBorrowedCount = books => {
  return all.length
 }
 
-function getMostCommonGenres(books) {
+const getMostCommonGenres= books =>{
   const arr = [];
   const obj = {};
   for (let i = 0; i < books.length; i++) {
@@ -25,7 +25,7 @@ function getMostCommonGenres(books) {
   arr.sort((gen1, gen2) => (gen1.count < gen2.count ? 1 : -1));
   return arr.slice(0, 5);
 }
-function helper(books){
+const helper = books =>{
   let arr = [] 
 for (let i=0;i<books.length; i++){ 
   let novels = {} 
@@ -35,12 +35,9 @@ for (let i=0;i<books.length; i++){
   const final = arr.sort((book1, book2)=> book1.count<book2.count?1:-1)
    return final.slice(0,5)
 }
-function getMostPopularBooks(books){
-let book = helper(books)
-return book;
-}
+const getMostPopularBooks = books => helper(books);
 
-function getMostPopularAuthors(books, authors) {
+const getMostPopularAuthors= (books, authors)=> {
   let arr = []
   //let author = {}
   for (let i=0;i<authors.length;i++){
