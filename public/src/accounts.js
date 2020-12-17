@@ -1,15 +1,18 @@
-const findAccountById = (accounts, id)=> accounts.find(acount => acount.id === id)
+const findAccountById = (accounts, id)=> accounts.find(acount => acount.id === id);
 
-const sortAccountsByLastName = accounts =>  accounts.sort((last1,last2)=> last1.name.last > last2.name.last ? 1 : -1)
+const sortAccountsByLastName = accounts =>  accounts.sort((last1,last2)=> last1.name.last > last2.name.last ? 1 : -1);
 
 
 const numberOfBorrows = (account, books) => {
   let result = books.reduce((borrowCount, book) => {
     book.borrows.filter(bookID => {if(bookID.id === account.id) borrowCount+= 1 })
-    return borrowCount
+    return borrowCount;
   }, 0)
-  return result
+  return result;
 }  
+// const booksInPossession = (account, books, authors) => {
+// console.log(books)
+// }
 
 const booksInPossession = (account, books, authors) =>  {
  let posees =[];
@@ -28,9 +31,20 @@ const booksInPossession = (account, books, authors) =>  {
     }
    }
  }
- return posees
+ return posees;
 }
-
+console.log(booksInPossession({
+  id: "5f446f2ed46724f41c9fc431",
+  picture: "https://api.adorable.io/avatars/75/ferrell.morris@ecolight.com",
+  age: 35,
+  name: {
+    first: "Ferrell",
+    last: "Morris",
+  },
+  company: "ECOLIGHT",
+  email: "ferrell.morris@ecolight.com",
+  registered: "Thursday, February 8, 2018 1:16 PM",
+},books,authors))
 
 module.exports = {
   findAccountById,
