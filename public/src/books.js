@@ -8,7 +8,7 @@
  return [nYet,done]
 }
 
-function getBorrowersForBook(book, accounts) {
+const getBorrowersForBook = (book, accounts) =>{
   let borrw = [];
   accounts.forEach( account=> {
   book.borrows.forEach(traking =>{
