@@ -39,6 +39,17 @@ function getMostPopularBooks(books){
 let book = helper(books)
 return book;
 }
+const getMostPopularAuthors = (books,authors) => {
+  let all = []
+  const mostP = books.filter(book => book.borrowslength)
+  const autH = authors.filter(author => author.id)
+  // .sort((auth1, auth2)=> auth1.borrows[0].id < auth2.borrows.length ? 1:-1)
+  if(books.authorId===authors.id){
+    all ++
+  }
+   return all
+}
+
 
 function getMostPopularAuthors(books, authors) {
   let arr = []
@@ -59,7 +70,7 @@ function getMostPopularAuthors(books, authors) {
   const final = arr.sort((auth1, auth2)=> auth1.count < auth2.count ? 1:-1)
   return final.slice(0,5)
   }
-
+  
 
 
 module.exports = {
