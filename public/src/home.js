@@ -5,8 +5,8 @@ const totalBooksCount = books => {
 const totalAccountsCount =accounts => accounts.length ;
 
 const booksBorrowedCount = books => {
- const all = books.filter(book => book.borrows[0].returned=== false);
- return all.length;
+ const totalBooks = books.filter(book => book.borrows[0].returned=== false);
+ return totalBooks.length;
 }
 
 const getMostCommonGenres= books =>{
@@ -29,10 +29,10 @@ const helper = books =>{
   let arr = [] ;
 for (let i=0;i<books.length; i++){ 
   let novels = {} 
-  novels.name = books[i].title 
-  novels.count = books[i].borrows.length 
+  novels.name = books[i].title ;
+  novels.count = books[i].borrows.length ;
   arr.push(novels) } 
-  const final = arr.sort((book1, book2)=> book1.count<book2.count?1:-1)
+  const final = arr.sort((book1, book2)=> book1.count<book2.count?1:-1);
    return final.slice(0,5);
 }
 const getMostPopularBooks = books => helper(books);
